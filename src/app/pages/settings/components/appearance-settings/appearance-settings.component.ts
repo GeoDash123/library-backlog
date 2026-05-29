@@ -9,20 +9,4 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 })
 export class AppearanceSettingsComponent {
 
-  darkMode = false;
-
-  @Output() darkModeChange = new EventEmitter<boolean>();
-
-  toggleDarkMode() {
-    this.darkMode = !this.darkMode;
-    
-    localStorage.setItem(
-      'darkMode',
-      JSON.stringify(this.darkMode)
-    );
-
-    this.darkModeChange.emit(this.darkMode);
-
-  }
-
 }
